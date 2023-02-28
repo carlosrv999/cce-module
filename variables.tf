@@ -28,10 +28,6 @@ variable "region" {
   type = string
 }
 
-variable "region" {
-  type = string
-}
-
 variable "service_network_cidr" {
   type    = string
   default = "10.247.0.0/20"
