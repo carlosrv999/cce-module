@@ -9,3 +9,7 @@ output "node_pool_id" {
 output "cluster_public_ip" {
   value = huaweicloud_vpc_eip.default.address
 }
+
+output "kubeconfig" {
+  value = huaweicloud_cce_cluster.default.kube_config_raw
+}
