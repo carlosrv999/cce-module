@@ -15,6 +15,11 @@ variable "container_network_type" {
   default = "vpc-router"
 }
 
+variable "initial_node_count" {
+  type    = number
+  default = 2
+}
+
 variable "flavor_id" {
   type    = string
   default = "cce.s1.small"

@@ -21,7 +21,7 @@ resource "huaweicloud_cce_node_pool" "node_pool" {
   availability_zone  = var.availability_zone_nodegroup
   cluster_id         = huaweicloud_cce_cluster.default.id
   flavor_id          = var.node_group_flavor_id
-  initial_node_count = 2
+  initial_node_count = var.initial_node_count
   name               = var.node_group_name
   password           = var.node_root_password
   os                 = var.os_nodes
