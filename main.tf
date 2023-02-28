@@ -9,6 +9,7 @@ resource "huaweicloud_cce_cluster" "default" {
   subnet_id              = var.subnet_id
   tags                   = var.tags
   vpc_id                 = var.vpc_id
+  eip                    = huaweicloud_vpc_eip.default.address
 
   masters {
     availability_zone = var.availability_zone_cluster
@@ -42,4 +43,16 @@ resource "huaweicloud_cce_node_pool" "node_pool" {
     volumetype     = "SSD"
   }
 
+}
+
+resource "huaweicloud_vpc_eip" "default" {
+  publicip {
+    type = "5_bgp"
+  }
+  bandwidth {
+    name        = "cce-module-eip"
+    size        = 10
+    share_type  = "PER"
+    charge_mode = "traffic"
+  }
 }
