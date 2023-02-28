@@ -1,17 +1,3 @@
-# Authentication
-
-variable "access_key" {
-  type = string
-}
-
-variable "secret_key" {
-  type = string
-}
-
-variable "project_id" {
-  type = string
-}
-
 # CCE
 
 variable "cluster_version" {
@@ -35,6 +21,10 @@ variable "flavor_id" {
 }
 
 variable "name" {
+  type = string
+}
+
+variable "region" {
   type = string
 }
 
