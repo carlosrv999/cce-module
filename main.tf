@@ -26,6 +26,7 @@ resource "huaweicloud_cce_node_pool" "node_pool" {
   password           = var.node_root_password
   os                 = var.os_nodes
   region             = var.region
+  runtime            = "containerd"
   scall_enable       = false
   type               = "vm"
 
